@@ -1,0 +1,16 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Gotham Pro", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --content-width: 1860px;
+  --container-offset: 10px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --black: #000;
+  --accent: #d7373d;
+  --grey: #313D45;
+}

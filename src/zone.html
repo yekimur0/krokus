@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+@include('partials/header.html')
+<main class="main main-zone">
+  @include('partials/heroPageZone.html')
+
+  <section class="zone-page">
+    <div class="container">
+      <h2 class="title__section zone-page__title">
+        специализированные <br/> зоны для тренировок
+      </h2>
+
+      <div class="zone-page__items">
+        <div class="item">
+          <div class="left">
+            <div class="title">Тренажерный зал</div>
+            <p class="desc">Современное пространство с тренажёрами. Встроенные таймеры и видеоинструкции помогут вам улучшить технику и достичь результатов.</p>
+            <span>Комплектация</span>
+            <ul class="list-reset list">
+              <li>Силовая рама или машина Смита</li>
+              <li>Тренажеры для верхней и горизонтальной тяги</li>
+              <li>Тренажеры для тренировки груди и рук</li>
+              <li>Разгибатель и сгибатель бедра</li>
+              <li>Тренажер для жима ногами</li>
+              <li>Тренажер для брюшного прессаа</li>
+            </ul>
+          </div>
+          <div class="right">
+            <img src="./img/zone-1.webp" alt="Тренажерный зал">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @include('partials/callback-sub.html')
+</main>
+
+
+@include('partials/footer.html')
+</body>
+
+
+</html>

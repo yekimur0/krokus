@@ -1,0 +1,146 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+@import './components/header';
+@import './components/hero';
+@import './components/futures';
+@import './components/zone';
+@import './components/carts';
+@import './components/programs';
+@import './components/news';
+@import './components/callback';
+@import './components/footer';
+
+// pages
+
+@import "pages/page";
+@import "pages/page-news";
+@import "pages/page-contacts";
+@import "pages/page-zone";
+@import "pages/page-team";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__row {
+    flex: 1 1 auto;
+    width: 100%;
+    border-bottom: 1px solid var(--white);
+    input {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 130%;
+      color: var(--white);
+      background-color : transparent;
+      width: 50%;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom : 25px;
+      outline: none;
+      transform: translateY(2px);
+      transition: .2s ease;
+      &:focus {
+        border-color: var(--accent);
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2.5vw, 32px);
+  }
+  &__policy {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    margin-top : 15px;
+    @media(max-width: 992px) {
+      grid-template-columns: 25px 1fr;
+      align-items: flex-start;
+    }
+    input {
+      accent-color: var(--accent);
+      width : 100%;
+      height: 100%;
+    }
+    span {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(11px, 1vw, 20px);
+      line-height: 130%;
+      color: var(--white);
+      a {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--white);
+        transition: color .2s ease;
+        @include hover {
+          &:hover {
+            color: var(--accent);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+.modal-trainer {
+  position : fixed;
+  top: 0;
+  left: 0;
+  width : 100%;
+  height: 100%;
+  z-index : 9999;
+  background-color : var(--grey);
+  overflow: auto;
+  &__container {
+    position : relative;
+  }
+  &__close {
+    position : absolute;
+    top: 80px;
+    right: 40px;
+  }
+  &__content {
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 2vw, 40px)
+  }
+  .left {
+    padding-top : 40px;
+    padding-left : 40px;
+    padding-bottom : 40px;
+    display : flex;
+    flex-direction: column;
+  }
+  .status {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: 100%;
+    color: var(--white);
+    margin-bottom : 24px;
+  }
+  .name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(26px, 4vw, 72px);
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+  }
+  .right {
+    img {
+      display : block;
+
+    }
+  }
+}

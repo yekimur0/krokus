@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+@include('partials/header.html')
+<main class="main main-team">
+  @include('partials/heroPageTeam.html')
+
+  <section class="team">
+    <div class="container">
+      <div class="title__section team__title">
+        наша команда <br/>
+        профессиональных тренеров
+      </div>
+
+      <div class="team__nav">
+        <ul class="list-reset list">
+          <li>
+            <button type="button" class="btn-reset link--more team__nav-btn active" data-train-btn="all">
+              Все
+              <span class="icon">
+                <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.9974 15.5L6.6389 15.8485L6.9974 16.2173L7.35589 15.8485L6.9974 15.5ZM7.4974 0.500001C7.4974 0.223858 7.27354 6.86621e-07 6.9974 6.98691e-07C6.72125 7.10762e-07 6.4974 0.223858 6.4974 0.500001L7.4974 0.500001ZM0.805565 9.84854L6.6389 15.8485L7.35589 15.1515L1.52256 9.15146L0.805565 9.84854ZM7.35589 15.8485L13.1892 9.84854L12.4722 9.15146L6.6389 15.1515L7.35589 15.8485ZM7.4974 15.5L7.4974 0.500001L6.4974 0.500001L6.4974 15.5L7.4974 15.5Z" fill="#010101" />
+               </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn-reset link--more team__nav-btn" data-train-btn="gym">
+              тренажерный зал
+              <span class="icon">
+                <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.9974 15.5L6.6389 15.8485L6.9974 16.2173L7.35589 15.8485L6.9974 15.5ZM7.4974 0.500001C7.4974 0.223858 7.27354 6.86621e-07 6.9974 6.98691e-07C6.72125 7.10762e-07 6.4974 0.223858 6.4974 0.500001L7.4974 0.500001ZM0.805565 9.84854L6.6389 15.8485L7.35589 15.1515L1.52256 9.15146L0.805565 9.84854ZM7.35589 15.8485L13.1892 9.84854L12.4722 9.15146L6.6389 15.1515L7.35589 15.8485ZM7.4974 15.5L7.4974 0.500001L6.4974 0.500001L6.4974 15.5L7.4974 15.5Z" fill="#010101" />
+               </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn-reset link--more team__nav-btn" data-train-btn="group">
+              групповая зона
+              <span class="icon">
+                <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.9974 15.5L6.6389 15.8485L6.9974 16.2173L7.35589 15.8485L6.9974 15.5ZM7.4974 0.500001C7.4974 0.223858 7.27354 6.86621e-07 6.9974 6.98691e-07C6.72125 7.10762e-07 6.4974 0.223858 6.4974 0.500001L7.4974 0.500001ZM0.805565 9.84854L6.6389 15.8485L7.35589 15.1515L1.52256 9.15146L0.805565 9.84854ZM7.35589 15.8485L13.1892 9.84854L12.4722 9.15146L6.6389 15.1515L7.35589 15.8485ZM7.4974 15.5L7.4974 0.500001L6.4974 0.500001L6.4974 15.5L7.4974 15.5Z" fill="#010101" />
+               </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn-reset link--more team__nav-btn" data-train-btn="water">
+              водная зона
+              <span class="icon">
+                <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.9974 15.5L6.6389 15.8485L6.9974 16.2173L7.35589 15.8485L6.9974 15.5ZM7.4974 0.500001C7.4974 0.223858 7.27354 6.86621e-07 6.9974 6.98691e-07C6.72125 7.10762e-07 6.4974 0.223858 6.4974 0.500001L7.4974 0.500001ZM0.805565 9.84854L6.6389 15.8485L7.35589 15.1515L1.52256 9.15146L0.805565 9.84854ZM7.35589 15.8485L13.1892 9.84854L12.4722 9.15146L6.6389 15.1515L7.35589 15.8485ZM7.4974 15.5L7.4974 0.500001L6.4974 0.500001L6.4974 15.5L7.4974 15.5Z" fill="#010101" />
+               </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn-reset link--more team__nav-btn" data-train-btn="sycle">
+              сайкл зона
+              <span class="icon">
+                <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.9974 15.5L6.6389 15.8485L6.9974 16.2173L7.35589 15.8485L6.9974 15.5ZM7.4974 0.500001C7.4974 0.223858 7.27354 6.86621e-07 6.9974 6.98691e-07C6.72125 7.10762e-07 6.4974 0.223858 6.4974 0.500001L7.4974 0.500001ZM0.805565 9.84854L6.6389 15.8485L7.35589 15.1515L1.52256 9.15146L0.805565 9.84854ZM7.35589 15.8485L13.1892 9.84854L12.4722 9.15146L6.6389 15.1515L7.35589 15.8485ZM7.4974 15.5L7.4974 0.500001L6.4974 0.500001L6.4974 15.5L7.4974 15.5Z" fill="#010101" />
+               </svg>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="trainers">
+        <div class="trainers__block">
+          <div class="trainer trainer--big" data-trainer="gym">
+            <div class="trainer__img">
+              <img src="./img/trainer/Elena%20Guseinova.webp" alt="">
+            </div>
+            <div class="trainer__name">Елена Гусейнова</div>
+            <div class="trainer__status">Тренажерный зал</div>
+          </div>
+          <div class="trainer__rows">
+            <div class="trainer__row row-3">
+              <div class="trainer" data-trainer="gym">
+                <div class="trainer__img">
+                  <img src="./img/trainer/1.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+              <div class="trainer" data-trainer="sycle">
+                <div class="trainer__img">
+                  <img src="./img/trainer/3.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+              <div class="trainer" data-trainer="water">
+                <div class="trainer__img">
+                  <img src="./img/trainer/4.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+            </div>
+            <div class="trainer__row row-2">
+              <div class="trainer" data-trainer="train-place">
+                <div class="trainer__img">
+                  <img src="./img/trainer/4.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+              <div class="trainer" data-trainer="train-place">
+                <div class="trainer__img">
+                  <img src="./img/trainer/3.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="trainer__row flex-row">
+          <div class="trainer" data-trainer="group">
+            <div class="trainer__img">
+              <img src="./img/trainer/1.webp" alt="">
+            </div>
+            <div class="trainer__name">Елена Гусейнова</div>
+            <div class="trainer__status">Тренажерный зал</div>
+          </div>
+          <div class="trainer" data-trainer="sycle">
+            <div class="trainer__img">
+              <img src="./img/trainer/3.webp" alt="">
+            </div>
+            <div class="trainer__name">Елена Гусейнова</div>
+            <div class="trainer__status">Тренажерный зал</div>
+          </div>
+          <div class="trainer" data-trainer="gym">
+            <div class="trainer__img">
+              <img src="./img/trainer/4.webp" alt="">
+            </div>
+            <div class="trainer__name">Елена Гусейнова</div>
+            <div class="trainer__status">Тренажерный зал</div>
+          </div>
+        </div>
+
+        <div class="trainers__block">
+
+          <div class="trainer__rows">
+            <div class="trainer__row row-3">
+              <div class="trainer" data-trainer="sycle">
+                <div class="trainer__img">
+                  <img src="./img/trainer/1.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+              <div class="trainer" data-trainer="water">
+                <div class="trainer__img">
+                  <img src="./img/trainer/3.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+              <div class="trainer" data-trainer="gym">
+                <div class="trainer__img">
+                  <img src="./img/trainer/4.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+            </div>
+            <div class="trainer__row row-2">
+              <div class="trainer" data-trainer="sycle">
+                <div class="trainer__img">
+                  <img src="./img/trainer/4.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+              <div class="trainer" data-trainer="water">
+                <div class="trainer__img">
+                  <img src="./img/trainer/3.webp" alt="">
+                </div>
+                <div class="trainer__name">Елена Гусейнова</div>
+                <div class="trainer__status">Тренажерный зал</div>
+              </div>
+            </div>
+          </div>
+          <div class="trainer trainer--big" data-trainer="grup">
+            <div class="trainer__img">
+              <img src="./img/trainer/Elena%20Guseinova.webp" alt="">
+            </div>
+            <div class="trainer__name">Елена Гусейнова</div>
+            <div class="trainer__status">Тренажерный зал</div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+  </section>
+
+
+
+</main>
+
+
+@include('partials/footer.html')
+</body>
+
+
+</html>

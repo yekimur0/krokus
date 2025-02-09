@@ -1,0 +1,16 @@
+.callback {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 2vw, 40px);
+    @media(max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__title {
+    margin-bottom : 24px;
+  }
+  &__text {
+    margin: 0;
+  }
+}

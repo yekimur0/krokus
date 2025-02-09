@@ -1,0 +1,77 @@
+.news-full {
+  margin-bottom : clamp(54px, 10vw, 200px);
+
+  &__nav {
+    margin-top    : clamp(40px, 3vw, 80px);
+    display       : flex;
+    align-items   : center;
+    gap           : 16px;
+    margin-bottom : 110px;
+    overflow-x    : auto;
+    overflow-y    : hidden;
+    @media(max-width : 992px) {
+      margin-bottom : 54px;
+    }
+  }
+
+  &__btn {
+    font-family    : var(--font-family);
+    font-weight    : 500;
+    font-size      : 24px;
+    line-height    : 167%;
+    letter-spacing : -0.03em;
+    text-transform : uppercase;
+    color          : var(--white);
+    opacity        : .7;
+    display        : flex;
+    align-items    : center;
+    gap            : 10px;
+    transition     : opacity .2s ease;
+
+    .icon {
+      width            : 34px;
+      height           : 34px;
+      display          : flex;
+      align-items      : center;
+      justify-content  : center;
+      border-radius    : 50%;
+      background-color : var(--white);
+      opacity          : .7;
+      transition       : .2s ease;
+    }
+
+    @include hover {
+      &:hover {
+        opacity : 1;
+
+        .icon {
+          transform        : rotate(-90deg);
+          opacity          : 1;
+          background-color : var(--accent);
+
+          svg > path {
+            stroke : var(--white);
+          }
+        }
+      }
+    }
+
+    &.active {
+      opacity : 1;
+
+      .icon {
+        transform        : rotate(-90deg);
+        opacity          : 1;
+        background-color : var(--accent);
+
+        svg > path {
+          stroke : var(--white);
+        }
+      }
+    }
+  }
+
+  &__more {
+    margin-top : clamp(16px, 2vw, 32px);
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+@include('partials/head.html')
+
+<body class="page__body">
+@include('partials/header.html')
+<main class="main main-news">
+  @include('partials/heroPage.html')
+  <section class="news-full">
+    <div class="container">
+      <div class="title__section news-full__title">Актуальная информация</div>
+
+      <div class="news-full__nav">
+        <button type="button" class="btn-reset news-full__btn active">
+          Все
+          <span class="icon">
+           <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.99935 15.5L6.64085 15.8485L6.99935 16.2173L7.35785 15.8485L6.99935 15.5ZM7.49935 0.500001C7.49935 0.223858 7.27549 6.86621e-07 6.99935 6.98691e-07C6.72321 7.10762e-07 6.49935 0.223858 6.49935 0.500001L7.49935 0.500001ZM0.807518 9.84854L6.64085 15.8485L7.35785 15.1515L1.52451 9.15146L0.807518 9.84854ZM7.35785 15.8485L13.1912 9.84854L12.4742 9.15146L6.64085 15.1515L7.35785 15.8485ZM7.49935 15.5L7.49935 0.500001L6.49935 0.500001L6.49935 15.5L7.49935 15.5Z" fill="#010101" />
+            </svg>
+          </span>
+        </button>
+        <button type="button" class="btn-reset news-full__btn">
+          события
+          <span class="icon">
+             <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.99935 15.5L6.64085 15.8485L6.99935 16.2173L7.35785 15.8485L6.99935 15.5ZM7.49935 0.500001C7.49935 0.223858 7.27549 6.86621e-07 6.99935 6.98691e-07C6.72321 7.10762e-07 6.49935 0.223858 6.49935 0.500001L7.49935 0.500001ZM0.807518 9.84854L6.64085 15.8485L7.35785 15.1515L1.52451 9.15146L0.807518 9.84854ZM7.35785 15.8485L13.1912 9.84854L12.4742 9.15146L6.64085 15.1515L7.35785 15.8485ZM7.49935 15.5L7.49935 0.500001L6.49935 0.500001L6.49935 15.5L7.49935 15.5Z" fill="#010101" />
+            </svg>
+          </span>
+        </button>
+        <button type="button" class="btn-reset news-full__btn">
+          акции
+          <span class="icon">
+            <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.99935 15.5L6.64085 15.8485L6.99935 16.2173L7.35785 15.8485L6.99935 15.5ZM7.49935 0.500001C7.49935 0.223858 7.27549 6.86621e-07 6.99935 6.98691e-07C6.72321 7.10762e-07 6.49935 0.223858 6.49935 0.500001L7.49935 0.500001ZM0.807518 9.84854L6.64085 15.8485L7.35785 15.1515L1.52451 9.15146L0.807518 9.84854ZM7.35785 15.8485L13.1912 9.84854L12.4742 9.15146L6.64085 15.1515L7.35785 15.8485ZM7.49935 15.5L7.49935 0.500001L6.49935 0.500001L6.49935 15.5L7.49935 15.5Z" fill="#010101" />
+            </svg>
+          </span>
+        </button>
+        <button type="button" class="btn-reset news-full__btn">
+          архив
+          <span class="icon">
+             <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.99935 15.5L6.64085 15.8485L6.99935 16.2173L7.35785 15.8485L6.99935 15.5ZM7.49935 0.500001C7.49935 0.223858 7.27549 6.86621e-07 6.99935 6.98691e-07C6.72321 7.10762e-07 6.49935 0.223858 6.49935 0.500001L7.49935 0.500001ZM0.807518 9.84854L6.64085 15.8485L7.35785 15.1515L1.52451 9.15146L0.807518 9.84854ZM7.35785 15.8485L13.1912 9.84854L12.4742 9.15146L6.64085 15.1515L7.35785 15.8485ZM7.49935 15.5L7.49935 0.500001L6.49935 0.500001L6.49935 15.5L7.49935 15.5Z" fill="#010101" />
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="news__items">
+        <div class="item">
+          <a class="link" href=""></a>
+          <div class="date">2024 <br/> октября</div>
+          <div class="image">
+            <img src="./img/news-img.webp" alt="">
+          </div>
+          <div class="title">оТКРЫТИЕ CROCUS FITNESS <br/> В ХАБАРОВСКЕ!</div>
+          <div class="arrow">
+            <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M64.667 64.668V65.668H65.667V64.668H64.667ZM2.04077 0.627533C1.65025 0.237007 1.01708 0.237007 0.626556 0.627533C0.236031 1.01806 0.236031 1.65122 0.626556 2.04175L2.04077 0.627533ZM63.667 10.8346V64.668H65.667V10.8346H63.667ZM64.667 63.668H10.8337V65.668H64.667V63.668ZM65.3741 63.9609L2.04077 0.627533L0.626556 2.04175L63.9599 65.3751L65.3741 63.9609Z" fill="white" />
+            </svg>
+          </div>
+        </div>
+        <div class="item">
+          <a class="link" href=""></a>
+          <div class="date">2024 <br/> октября</div>
+          <div class="number">
+            06
+          </div>
+          <div class="title">оТКРЫТИЕ CROCUS <br/> FITNESS В ХАБАРОВСКЕ!</div>
+          <div class="arrow">
+            <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M64.667 64.668V65.668H65.667V64.668H64.667ZM2.04077 0.627533C1.65025 0.237007 1.01708 0.237007 0.626556 0.627533C0.236031 1.01806 0.236031 1.65122 0.626556 2.04175L2.04077 0.627533ZM63.667 10.8346V64.668H65.667V10.8346H63.667ZM64.667 63.668H10.8337V65.668H64.667V63.668ZM65.3741 63.9609L2.04077 0.627533L0.626556 2.04175L63.9599 65.3751L65.3741 63.9609Z" fill="white" />
+            </svg>
+          </div>
+        </div>
+        <div class="item">
+          <a class="link" href=""></a>
+          <div class="date">2024 <br/> октября</div>
+          <div class="number">
+            05
+          </div>
+          <div class="title">оТКРЫТИЕ CROCUS <br/> FITNESS В ХАБАРОВСКЕ!</div>
+          <div class="arrow">
+            <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M64.667 64.668V65.668H65.667V64.668H64.667ZM2.04077 0.627533C1.65025 0.237007 1.01708 0.237007 0.626556 0.627533C0.236031 1.01806 0.236031 1.65122 0.626556 2.04175L2.04077 0.627533ZM63.667 10.8346V64.668H65.667V10.8346H63.667ZM64.667 63.668H10.8337V65.668H64.667V63.668ZM65.3741 63.9609L2.04077 0.627533L0.626556 2.04175L63.9599 65.3751L65.3741 63.9609Z" fill="white" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <a class="news-full__more link--more" href="">
+        больше новостей
+        <span class="icon">
+          <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 6.9987L15.8485 7.35719L16.2173 6.9987L15.8485 6.6402L15.5 6.9987ZM0.5 6.4987C0.223858 6.4987 4.19567e-07 6.72256 4.43708e-07 6.9987C4.67849e-07 7.27484 0.223858 7.4987 0.5 7.4987L0.5 6.4987ZM9.84854 13.1905L15.8485 7.35719L15.1515 6.6402L9.15146 12.4735L9.84854 13.1905ZM15.8485 6.6402L9.84854 0.806865L9.15146 1.52386L15.1515 7.35719L15.8485 6.6402ZM15.5 6.4987L0.5 6.4987L0.5 7.4987L15.5 7.4987L15.5 6.4987Z" fill="#010101" />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+  @include('partials/callback-sub.html')
+</main>
+
+
+@include('partials/footer.html')
+</body>
+
+
+</html>

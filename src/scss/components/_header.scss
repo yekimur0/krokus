@@ -1,0 +1,90 @@
+.header {
+  padding  : 32px 0;
+  position : fixed;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  z-index  : 999;
+  transition: .2s ease-in-out;
+  .logo {
+    padding-left : 245px;
+    @media(max-width: 768px) {
+      max-width: 75px;
+    }
+  }
+
+  &__wrapper {
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+  }
+
+  &__phone {
+    transition : .2s ease;
+    @media(max-width : 640px) {
+      display : none;
+    }
+    @include hover {
+      animation : rotating .5s infinite linear;
+    }
+  }
+
+  .actions {
+    display     : flex;
+    align-items : center;
+    gap         : 12px;
+  }
+
+  @media(max-width : 640px) {
+    .burger {
+      order : 3
+    }
+    .logo {
+      order     : 1;
+      flex      : 1 1 auto;
+      padding   : 0;
+      img {
+        transition: .2s ease;
+      }
+    }
+    .actions {
+      order        : 2;
+      margin-right : 10px;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+}
+
+@keyframes rotating {
+  0% {
+    rotate  : 0deg;
+    opacity : 1;
+  }
+  50% {
+    rotate  : 15deg;
+    opacity : .5;
+  }
+  100% {
+    rotate  : 0deg;
+    opacity : 1;
+  }
+}
+
+.header--fixed {
+  background-color: var(--grey);
+  padding : 6px 0;
+  -webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+  .logo {
+    img {
+      scale: .8;
+    }
+  }
+  .btn--white {
+    padding : 12px 24px;
+  }
+}

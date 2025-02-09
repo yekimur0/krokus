@@ -1,0 +1,117 @@
+.zone-page {
+  margin-bottom : 112px;
+  @media(max-width : 992px) {
+    margin-bottom : 60px;
+  }
+
+  &__title {
+    margin-bottom : 120px;
+    @media(max-width : 992px) {
+      margin-bottom : 30px;
+      font-size: 22px;
+    }
+  }
+
+  &__items {
+    display : grid;
+    gap     : 20px;
+
+    .item {
+      display               : grid;
+      grid-template-columns : 1fr 1fr;
+      padding-top           : 32px;
+      position              : relative;
+      border-top            : 1px solid var(--white);
+      border-bottom         : 1px solid var(--white);
+      @media(max-width : 1200px) {
+        padding-block : 18px;
+      }
+      @media(max-width: 768px) {
+        display : flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+      }
+      .left {
+        display        : flex;
+        flex-direction : column;
+        gap            : 20px;
+        padding-bottom : 32px;
+        @media(max-width : 1200px) {
+          padding-bottom : 0;
+        }
+      }
+
+      .right {
+        display     : flex;
+        align-items : end;
+
+        img {
+          display : block;
+        }
+      }
+
+      .title {
+        font-family    : var(--font-family);
+        font-weight    : 500;
+        font-size      : clamp(22px, 4vw, 64px);
+        line-height    : 94%;
+        letter-spacing : -0.03em;
+        color          : var(--white);
+        flex           : 1 1 auto;
+        padding-bottom : 160px;
+        @media(max-width : 1200px) {
+          padding-bottom : 40px;
+        }
+        @media(max-width: 768px) {
+          padding-bottom : 0;
+        }
+      }
+
+      .desc {
+        font-family : var(--font-family);
+        font-weight : 400;
+        font-size   : clamp(16px, 1.5vw, 24px);
+        line-height : 108%;
+        color       : var(--white);
+        max-width   : 600px;
+        margin      : 0;
+      }
+
+      span {
+        font-family : var(--font-family);
+        font-weight : 400;
+        font-size   : clamp(16px, 1vw, 20px);
+        line-height : 130%;
+        color       : var(--accent);
+
+      }
+
+      .list {
+        display        : flex;
+        flex-direction : column;
+        gap            : 20px;
+
+        li {
+          font-family  : var(--font-family);
+          font-weight  : 400;
+          font-size    : clamp(16px, 1.5vw, 24px);
+          line-height  : 108%;
+          color        : var(--white);
+          position     : relative;
+          padding-left : 16px;
+
+          &:before {
+            content          : '';
+            position         : absolute;
+            top              : 10px;
+            left             : 0;
+            width            : 5px;
+            height           : 5px;
+            background-color : var(--accent);
+            border-radius    : 50%;
+          }
+        }
+      }
+    }
+  }
+}
