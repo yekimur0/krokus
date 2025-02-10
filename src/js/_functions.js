@@ -49,14 +49,14 @@ import { burger } from "./functions/burger";
 // });
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination, Scrollbar, } from "swiper";
+import Swiper, {EffectFade, Navigation, Pagination, Scrollbar, Thumbs, } from "swiper";
 
-Swiper.use([Navigation, Pagination, Scrollbar]);
+Swiper.use([EffectFade, Navigation, Pagination, Scrollbar, Thumbs,]);
 
 const swiper_programs = new Swiper('.swiper-programs', {
   slidesPerView: 1,
   spaceBetween: 10,
-
+  
   navigation: {
     prevEl: ".programs__nav .prev",
     nextEl: ".programs__nav .next"
@@ -67,28 +67,27 @@ const swiper_programs = new Swiper('.swiper-programs', {
 })
 
 const swiper_zone = new Swiper('.swiper-zone', {
-
-  spaceBetween: 0,
-  slidesPerGroup: 3,
+  slidesPerView: 1,
+  spaceBetween: 10,
   grabCursor: true,
 
-  breakpoints: {
-    320: {
-      slidesPerView: 1.5,
-    },
-    768: {
-      slidesPerView: 2.5
-    },
-    1024: {
-      slidesPerView: 3,
-    }
-  },
+  
+  effect: 'fade',
 
+ 
+})
+
+const swiper_zone_2 = new Swiper('.swiper-zone-2', {
+  slidesPerView: 3,
+  thumbs: {
+    swiper: swiper_zone
+  },
   navigation: {
     prevEl: '.zone .slider-navigation .prev',
     nextEl: '.zone .slider-navigation .next'
   },
-  speed: 1000,
+
+  speed: 500,
 })
 
 const swiper_hero = new Swiper('.swiper-hero', {

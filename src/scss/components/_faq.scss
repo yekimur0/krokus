@@ -1,0 +1,53 @@
+.faq {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    padding-block: clamp(16px, 2vw, 32px);
+    cursor: pointer;
+
+    > * {
+      pointer-events: none;
+    }
+    .title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: clamp(16px, 2vw, 24px);
+      line-height: 108%;
+      color: var(--white);
+    }
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    &-bottom {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+    }
+    .content {
+      overflow: hidden;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(14px, 2vw, 20px);
+      line-height: 130%;
+      color: var(--white);
+    }
+
+    &.active {
+    }
+  }
+}
