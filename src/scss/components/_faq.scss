@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    @media(max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__items {
@@ -37,6 +40,7 @@
       display: grid;
       grid-template-rows: 0fr;
       overflow: hidden;
+      transition: .2s ease;
     }
     .content {
       overflow: hidden;
@@ -46,8 +50,19 @@
       line-height: 130%;
       color: var(--white);
     }
-
+    .toggler svg {
+      transition: rotate .2s ease;
+    }
     &.active {
+      .faq__item-bottom {
+        grid-template-rows: 1fr;
+        margin-top : 20px;
+      }
+      .toggler {
+        svg {
+          rotate: 180deg;
+        }
+      }
     }
   }
 }

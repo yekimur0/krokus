@@ -1,8 +1,8 @@
 export const accordion = () => {
-  const parent = document?.querySelector(".carts__items");
+  const parent = document?.querySelector(".faq__items");
 
   parent?.addEventListener("click", (e) => {
-    if (e.target.classList.contains("item")) {
+    if (e.target.classList.contains("faq__item")) {
       openAccordion(e.target);
     }
     return;
