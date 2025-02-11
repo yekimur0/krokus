@@ -1,5 +1,15 @@
 .about-futures {
   margin-bottom : 200px;
+  position : relative;
+  &:before {
+    content: '';
+    position : absolute;
+    left: 0;
+    top: 0;
+    width : 100%;
+    height: 100%;
+    background : url("../../img/lines.svg") no-repeat;
+  }
   @media(max-width : 1200px) {
     margin-bottom : 100px;
   }
@@ -331,5 +341,81 @@
   }
   @media(max-width : 992px) {
     margin-bottom : 54px;
+  }
+
+  &__title {
+    margin-bottom : clamp(32px, 6.5vw, 120px);
+  }
+
+  &__slider {
+    display               : grid;
+    grid-template-columns : 600px 1fr;
+    gap                   : 20px;
+  }
+
+  &__row {
+    display               : grid;
+    grid-template-columns : repeat(4, 1fr);
+    gap                   : 20px;
+
+    &:not(:last-child) {
+      margin-bottom : 20px;
+    }
+
+    &.row-3 {
+      .main-img {
+        &:nth-child(2) {
+          grid-column-start : 3;
+        }
+      }
+
+    }
+
+    &.row-2 {
+      .main-img {
+        &:nth-child(1) {
+          grid-column-start : 2;
+        }
+
+        &:nth-child(2) {
+          grid-column-start : 4;
+        }
+      }
+    }
+  }
+
+  .main-img {
+    position : relative;
+    cursor   : pointer;
+
+    &:before {
+      content    : '';
+      position   : absolute;
+      top        : 50%;
+      left       : 50%;
+      transform  : translate(-50%, -50%);
+      width      : 40px;
+      height     : 40px;
+      background : url("../../img/loop.svg") no-repeat;
+      opacity    : 0;
+      visibility : hidden;
+      transition : .2s ease;
+    }
+
+    @include hover {
+      &:hover {
+        &:before {
+          opacity    : 1;
+          visibility : visible;
+        }
+      }
+    }
+
+    img {
+      width          : 100%;
+      height         : 100%;
+      border-radius  : 30px;
+      pointer-events : none;
+    }
   }
 }

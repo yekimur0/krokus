@@ -2,7 +2,7 @@
 export const listener = () => {
     document.body.addEventListener('click', (e) => {
         let target = e.target;
-
+        console.log(target);
         if (target.classList.contains('registry__changer-block')) changeWrapper(target);
         if (target.dataset.trainBtn) showTrainers(target);
         function changeWrapper(target) {
