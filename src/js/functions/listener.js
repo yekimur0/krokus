@@ -1,10 +1,41 @@
-
 export const listener = () => {
     document.body.addEventListener('click', (e) => {
         let target = e.target;
         console.log(target);
         if (target.classList.contains('registry__changer-block')) changeWrapper(target);
         if (target.dataset.trainBtn) showTrainers(target);
+        if (target.classList.contains('header-menu__title')) showListMenu(target);
+        if (target.hasAttribute('data-vacancy-link')) {
+          e.preventDefault();
+          showModal('modal-vacancy', target);
+        }
+        if(target.hasAttribute('data-close-modal')) closeModal(target);
+
+
+
+        function closeModal(target) {
+          const parent = target.closest('.modal');
+
+          parent.classList.remove('active');
+        }
+
+
+        
+        function showModal(selector, target) {
+          const el = document.getElementById(selector);
+          el.classList.add('active');
+        }
+
+
+        function showListMenu (target) {
+          const parent = target.closest('.header-menu__block');
+          const list = parent.querySelector('.header-menu__list');
+          const activeTitle = document.querySelector('.header-menu__title.active');
+
+          target.classList.toggle('active');
+          list.classList.toggle('active');
+        }
+
         function changeWrapper(target) {
             let id = target.dataset.changer;
 

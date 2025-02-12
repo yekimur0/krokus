@@ -1,3 +1,6 @@
+import {burger} from './functions/burger'
+
+
 import Swiper, {EffectFade, Navigation, Pagination, Scrollbar, Thumbs, } from "swiper";
 
 Swiper.use([EffectFade, Navigation, Pagination, Scrollbar, Thumbs,]);

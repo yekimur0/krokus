@@ -8,9 +8,9 @@
 
   burger?.addEventListener("click", (e) => {
     burger?.classList.toggle("burger--active");
-    menu?.classList.toggle("nav--active");
+    menu?.classList.toggle("active");
 
-    if (menu?.classList.contains("nav--active")) {
+    if (menu?.classList.contains("active")) {
       burger?.setAttribute("aria-expanded", "true");
       burger?.setAttribute("aria-label", "Закрыть меню");
     } else {
@@ -23,7 +23,7 @@
     burger?.setAttribute("aria-expanded", "false");
     burger?.setAttribute("aria-label", "Открыть меню");
     burger.classList.remove("burger--active");
-    menu.classList.remove("nav--active");
+    menu.classList.remove("active");
   });
 
   menuItems?.forEach((el) => {
@@ -31,7 +31,7 @@
       burger?.setAttribute("aria-expanded", "false");
       burger?.setAttribute("aria-label", "Открыть меню");
       burger.classList.remove("burger--active");
-      menu.classList.remove("nav--active");
+      menu.classList.remove("active");
     });
   });
 })();

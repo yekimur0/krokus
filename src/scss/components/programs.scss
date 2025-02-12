@@ -1,4 +1,6 @@
 .programs {
+  max-width: 1920px;
+  margin: 0 auto;
   margin-bottom: 200px;
   position: relative;
   @media (max-width: 1200px) {
@@ -139,6 +141,10 @@
       background-color: var(--white);
       border-radius: 50%;
       transition: background-color 0.2s ease;
+      @media (max-width: 640px) {
+        width: 45px;
+        height: 45px;
+      }
       @include hover {
         &:hover {
           background-color: var(--accent);
@@ -150,6 +156,8 @@
       }
 
       svg {
+        max-width: 100%;
+        width: 100%;
         pointer-events: none;
       }
     }

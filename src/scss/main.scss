@@ -134,12 +134,20 @@
     position: absolute;
     top: 80px;
     right: 40px;
+    @media (max-width: 640px) {
+      top: 20px;
+      right: 20px;
+    }
   }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(20px, 2vw, 40px);
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   .left {
@@ -181,7 +189,7 @@
     li {
       font-family: var(--font-family);
       font-weight: 400;
-      font-size: 24px;
+      font-size: clamp(16px, 2vw, 24px);
       line-height: 108%;
       color: var(--white);
       position: relative;
@@ -368,6 +376,174 @@
       svg {
         pointer-events: none;
       }
+    }
+  }
+}
+
+.modal-vacancy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: var(--grey);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  overflow: auto;
+
+  &__container {
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    cursor: pointer;
+    @media (max-width: 640px) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(20px, 2vw, 40px);
+    padding: clamp(20px, 2vw, 40px);
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(14px, 1vw, 20px);
+    line-height: 130%;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 32px;
+  }
+  .income {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(24px, 2vw, 48px);
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #fff 0%, #313d45 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: clamp(20px, 3vw, 56px);
+  }
+  .status {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: 100%;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: clamp(24px, 3vw, 56px);
+    }
+
+    li {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(16px, 2vw, 24px);
+      line-height: 108%;
+      color: var(--white);
+      position: relative;
+      padding-left: 24px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: var(--accent);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(26px, 4vw, 72px);
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    position: relative;
+    margin-bottom: 100px;
+    @media (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 35%;
+      height: 1px;
+      background-color: var(--white);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 18%;
+      height: 1px;
+      background-color: var(--accent);
+      z-index: 1;
+    }
+  }
+
+  .right {
+    border-radius: 20px;
+    background: #465058;
+    padding: 32px;
+
+    .cb-title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: clamp(22px, 2vw, 32px);
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: clamp(20px, 3vw, 56px);
+    }
+    span {
+      margin-bottom: 0;
+      color: var(--white);
     }
   }
 }

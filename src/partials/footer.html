@@ -127,9 +127,9 @@
   </div>
 </footer>
 
-<div class="modal-trainer" id="modal-trainer">
+<div class="modal modal-trainer" id="modal-trainer">
   <div class="modal-trainer__container">
-    <div class="modal-trainer__close link--more">
+    <div class="modal-trainer__close link--more" data-close-modal>
       Закрыть
       <svg
         width="38"
@@ -178,9 +178,9 @@
   </div>
 </div>
 
-<div class="modal-gallery" id="modal-gallery">
+<div class="modal modal-gallery" id="modal-gallery">
   <div class="modal-gallery__container">
-    <div class="modal-gallery__close link--more">
+    <div class="modal-gallery__close link--more" data-close-modal>
       Закрыть
       <svg
         width="38"
@@ -269,6 +269,122 @@
             </svg>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-vacancy" id="modal-vacancy">
+  <div class="modal-vacancy__container">
+    <div class="modal-vacancy__close link--more" data-close-modal>
+      Закрыть
+      <div class="icon">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="19" cy="19" r="19" fill="white" />
+          <path
+            d="M28 19L28.3485 19.3585L28.7173 19L28.3485 18.6415L28 19ZM10 18.5C9.72386 18.5 9.5 18.7239 9.5 19C9.5 19.2761 9.72386 19.5 10 19.5L10 18.5ZM21.1485 26.3585L28.3485 19.3585L27.6515 18.6415L20.4515 25.6415L21.1485 26.3585ZM28.3485 18.6415L21.1485 11.6415L20.4515 12.3585L27.6515 19.3585L28.3485 18.6415ZM28 18.5L10 18.5L10 19.5L28 19.5L28 18.5Z"
+            fill="#010101"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal-vacancy__content">
+      <div class="left">
+        <div class="status">Офис</div>
+        <div class="name">Старший Администратор</div>
+        <div class="income">174 000 ₽/мес</div>
+        <span>Функционал</span>
+        <ul class="list-reset list">
+          <li>Встреча Гостей и Членов клуба;</li>
+          <li>Прием и распределение входящих телефонных звонков;</li>
+          <li>Консультирование Членов клуба о дополнительных услугах;</li>
+          <li>Бронирование услуг для клиентов клуба;</li>
+          <li>Взаимодействие с подразделениями клуба;</li>
+          <li>Решение конфликтных ситуаций;</li>
+          <li>Введение документации и отчетности.</li>
+        </ul>
+
+        <span>Что мы ждем от кандидата</span>
+        <ul class="list-reset list">
+          <li>
+            Высшее образование/неполное высшее (обязательное
+            требование-возможность работать в полном графике);
+          </li>
+          <li>Желателен опыт работы от года в сфере услуг, продаж, сервиса;</li>
+          <li>
+            Уверенный пользователей ПК (программы World, Exsel, PowerPoint, 1C
+            КПО);
+          </li>
+          <li>Умение обрабатывать и работать с возражениями;</li>
+          <li>
+            Грамотная речь, коммуникабельность, клиентоориентированность,
+            ответственность и пунктуальность;
+          </li>
+          <li>Высокая работоспособность;</li>
+          <li>Знание иностранных языков приветсвуется;</li>
+          <li>
+            Умение работать с оргтехникой (принтер, сканер, стационарные
+            телефоны и т.п.).
+          </li>
+        </ul>
+
+        <span>Мы предлагаем</span>
+        <ul class="list-reset list">
+          <li>Официальное трудоустройство согласно ТК РФ;/li></li>
+          <li>ДМС</li>
+          <li>TRX</li>
+          <li>Белую заработную плату;</li>
+          <li>График работы 4/2;</li>
+          <li>Скидки и бонусы для сотрудников;</li>
+          <li>Скидки и бонусы для сотрудников;</li>
+          <li>Насыщенную корпоративную жизнь.</li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="cb-title">Оставить заявку</div>
+        <form class="form" action="">
+          <div class="form__row">
+            <input type="text" placeholder="Ваше имя" />
+          </div>
+          <div class="form__row">
+            <input type="text" placeholder="E-mail" />
+          </div>
+          <div class="form__row">
+            <input type="text" placeholder="+7 (___) ___ __ __" />
+          </div>
+          <div class="form__row">
+            <input type="text" placeholder="" value="Старший Администратор" />
+          </div>
+
+          <div class="form__row">
+            <input
+              type="text"
+              placeholder="Или вставьте ссылку на резюме hh.ru или Superjob.ru"
+            />
+          </div>
+
+          <div class="form__bottom">
+            <div class="form__policy">
+              <input type="checkbox" class="input-checkbox" />
+              <span
+                >Я согласен(а)
+                <a href="">на обработку моих персональных данных <br /> </a> и
+                ознакомлен(а) с
+                <a href="">Политикой конфиденциальности</a></span
+              >
+            </div>
+            <button class="btn-reset btn--white form__btn">
+              Оставить заявку
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
