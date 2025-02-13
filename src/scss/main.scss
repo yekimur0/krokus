@@ -3,6 +3,7 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "./components/slimsSelect";
 
 @import "./components/header";
 @import "./components/hero";
@@ -13,6 +14,8 @@
 @import "./components/news";
 @import "./components/callback";
 @import "./components/faq";
+@import "./components/single";
+@import "./components/more-news";
 @import "./components/footer";
 
 // pages
@@ -23,6 +26,12 @@
 @import "pages/page-zone";
 @import "pages/page-team";
 @import "pages/page-about";
+
+.page__single {
+  .footer {
+    margin-top: 0;
+  }
+}
 
 .form {
   display: flex;
@@ -64,8 +73,9 @@
   &__policy {
     display: grid;
     grid-template-columns: 38px 1fr;
-    gap: 10px;
+    gap: 15px;
     margin-top: 15px;
+    align-items: flex-start;
     @media (max-width: 992px) {
       grid-template-columns: 25px 1fr;
       align-items: flex-start;
@@ -73,14 +83,14 @@
 
     input {
       accent-color: var(--accent);
-      width: 100%;
-      height: 100%;
+      width: 32px;
+      height: 32px;
     }
 
     span {
       font-family: var(--font-family);
       font-weight: 400;
-      font-size: clamp(11px, 1vw, 20px);
+      font-size: clamp(11px, 1vw, 16px);
       line-height: 130%;
       color: var(--white);
 
@@ -104,6 +114,35 @@
       width: 100%;
       margin-top: 20px;
     }
+  }
+
+  .ss-main {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--white);
+    box-shadow: none;
+  }
+
+  .ss-single {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--white);
+    background-color: transparent;
+    width: 50%;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 25px;
+    outline: none;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .ss-main .ss-arrow path {
+    stroke: var(--white);
   }
 }
 
@@ -546,4 +585,137 @@
       color: var(--white);
     }
   }
+}
+
+.modal-callback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(49, 61, 69, 0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  padding: 10px;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__container {
+    max-width: 1220px;
+    background-color: var(--white);
+    position: relative;
+    border-radius: 15px;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    @include hover {
+      &:hover {
+        svg path {
+          stroke: var(--accent);
+        }
+      }
+    }
+    svg {
+      pointer-events: none;
+    }
+  }
+  .right {
+    @media (max-width: 992px) {
+      display: none;
+    }
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .left {
+    padding: 20px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(20px, 3vw, 32px);
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #010101;
+    margin-bottom: clamp(20px, 2vw, 40px);
+  }
+  .form__row {
+    border-color: #000;
+  }
+
+  .form__policy span {
+    color: #000;
+    font-size: clamp(9px, 1vw, 12px);
+    line-height: 140%;
+    a {
+      color: #000;
+    }
+  }
+  .form__btn {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 53px;
+    padding: 15px 20px;
+  }
+  .ss-single {
+    color: var(--black);
+    margin: 0 !important;
+  }
+  .ss-main .ss-arrow path {
+    stroke: var(--black);
+  }
+}
+
+.ss-content .ss-search {
+  display: none !important;
+}
+
+.ss-list {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ss-content {
+  background-color: var(--grey);
+}
+
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+.ss-content .ss-list .ss-option:hover {
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+.ss-content .ss-list .ss-option {
+  color: var(--white);
 }

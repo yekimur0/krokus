@@ -357,7 +357,7 @@
             <input type="text" placeholder="E-mail" />
           </div>
           <div class="form__row">
-            <input type="text" placeholder="+7 (___) ___ __ __" />
+            <input type="text" placeholder="+7 (___) ___ __ __" class="phone" />
           </div>
           <div class="form__row">
             <input type="text" placeholder="" value="Старший Администратор" />
@@ -368,6 +368,78 @@
               type="text"
               placeholder="Или вставьте ссылку на резюме hh.ru или Superjob.ru"
             />
+          </div>
+
+          <div class="form__bottom">
+            <div class="form__policy">
+              <input type="checkbox" class="input-checkbox" />
+              <span
+                >Я согласен(а)
+                <a href="">на обработку моих персональных данных <br /> </a> и
+                ознакомлен(а) с
+                <a href="">Политикой конфиденциальности</a></span
+              >
+            </div>
+            <button class="btn-reset btn--white form__btn">
+              Оставить заявку
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-callback" id="modal-callback">
+  <div class="modal-callback__container">
+    <div class="modal-callback__close" data-close-modal>
+      <svg
+        width="34"
+        height="34"
+        viewBox="0 0 34 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M25.5 8.5L8.5 25.5"
+          stroke="#010101"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M8.5 8.5L25.5 25.5"
+          stroke="#010101"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+
+    <div class="modal-callback__content">
+      <div class="right">
+        <img src="../img/modal-cb-img.webp" aria-hidden="true" />
+      </div>
+      <div class="left">
+        <div class="title">
+          станьте частью <br />
+          сильной команды
+        </div>
+        <form class="form" action="">
+          <div class="form__row">
+            <input type="text" placeholder="Ваше имя" />
+          </div>
+          <div class="form__row">
+            <input type="text" placeholder="E-mail" />
+          </div>
+          <div class="form__row">
+            <input type="text" placeholder="+7 (___) ___ __ __" class="phone" />
+          </div>
+          <div class="form__row">
+            <select name="field-abon" class="field-abon">
+              <option value="" selected>Вид абонемента</option>
+              <option value="Абонимент 2">Абонимент 1</option>
+              <option value="Абонимент 2">Абонимент 2</option>
+            </select>
           </div>
 
           <div class="form__bottom">

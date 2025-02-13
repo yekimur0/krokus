@@ -136,14 +136,13 @@ customProgressBar();
 // Подключение анимаций по скроллу
 // import AOS from "aos";
 
-// Подключение параллакса блоков при скролле
-// import Rellax from 'rellax';
-// const rellax = new Rellax('.rellax');
+
 
 
 import { accordion } from "./functions/accordion";
 import { MY_SELECT } from "./functions/my-select";
 import { listener } from "./functions/listener";
+import Inputmask from "inputmask";
 accordion();
 
 window.addEventListener('scroll', () => {
@@ -155,4 +154,22 @@ window.addEventListener('scroll', () => {
   } else {
     header.classList.remove('header--fixed');
   }
+})
+
+import SlimSelect from 'slim-select'
+
+const inputAbon = document?.querySelectorAll('.field-abon');
+const phones = document.querySelectorAll('.phone');
+
+inputAbon?.forEach((item) => {
+  console.log(item)
+  new SlimSelect({
+    select: item
+  })
+})
+
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+
+phones.forEach((phone) => {
+  inputMask.mask(phone);
 })

@@ -1,168 +1,166 @@
 .footer {
-  background    : #1d1d1d;
-  padding-block : clamp(60px, 6vw, 120px);
-  margin-top    : 120px;
+  background: #1d1d1d;
+  padding-block: clamp(60px, 6vw, 120px);
+  margin-top: 120px;
 
   &__top {
-    display         : flex;
-    justify-content : space-between;
-    flex-wrap       : wrap;
-    gap             : 20px;
-    height          : 100%;
-    margin-bottom   : 130px;
-    @media(max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+    margin-bottom: 130px;
+    @media (max-width: 768px) {
       margin-bottom: 62px;
     }
   }
 
   &__middle {
-    display         : flex;
-    justify-content : space-between;
-    gap             : 20px;
-    flex-wrap       : wrap;
-    padding-bottom : 80px;
-    position : relative;
-    z-index : 1;
-    @media(max-width: 1140px) {
-      padding-bottom : 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 1140px) {
+      padding-bottom: 0;
     }
     .policy {
-      display     : flex;
-      align-items : center;
+      display: flex;
+      align-items: center;
       flex-wrap: wrap;
-      gap         : clamp(20px, 9vw, 182px);
-      @media(max-width: 768px) {
+      gap: clamp(20px, 9vw, 182px);
+      @media (max-width: 768px) {
         gap: 10px;
       }
       a {
-        font-family : var(--font-family);
-        font-weight : 400;
-        font-size   : clamp(16px, 1.5vw, 20px);
-        line-height : 130%;
-        color       : var(--white);
-        transition  : color .2s ease;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(16px, 1.5vw, 20px);
+        line-height: 130%;
+        color: var(--white);
+        transition: color 0.2s ease;
         @include hover {
           &:hover {
-            color : var(--accent);
+            color: var(--accent);
           }
-
         }
       }
     }
   }
 
   &__logo {
-    flex : 1 1 auto;
+    flex: 1 1 auto;
   }
 
   &__copyright {
-    font-family : var(--font-family);
-    font-weight : 400;
-    font-size   : clamp(16px, 1.5vw, 20px);
-    line-height : 130%;
-    color       : var(--white);
-    flex        : 1 1 auto;;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: 130%;
+    color: var(--white);
+    flex: 1 1 auto;
   }
 
   &__content {
-    display               : grid;
-    grid-template-columns : 1fr 1fr 1fr;
-    gap                   : 40px;
-    @media(max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    @media (max-width: 768px) {
       grid-template-columns: 1fr 1fr;
-
     }
   }
 
   &__list {
     .title {
-      font-family    : var(--font-family);
-      font-weight    : 500;
-      font-size      : clamp(22px, 3vw, 32px);
-      line-height    : 125%;
-      letter-spacing : -0.03em;
-      text-transform : uppercase;
-      color          : var(--white);
-      margin-bottom  : clamp(20px, 3vw, 32px)
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: clamp(20px, 3vw, 32px);
     }
 
     .list {
-      display        : flex;
-      flex-direction : column;
-      gap            : 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     .link {
-      font-family : var(--font-family);
-      font-weight : 400;
-      font-size   : clamp(16px, 1.5vw, 20px);
-      line-height : 130%;
-      color       : var(--white);
-      transition  : color .2s ease;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(16px, 1.5vw, 20px);
+      line-height: 130%;
+      color: var(--white);
+      transition: color 0.2s ease;
 
       @include hover {
         &:hover {
-          color : var(--accent);
+          color: var(--accent);
         }
       }
     }
   }
 
   &__text {
-    font-family   : var(--font-family);
-    font-weight   : 400;
-    font-size     : clamp(16px, 1vw, 20px);
-    line-height   : 130%;
-    color         : var(--white);
-    margin-bottom : 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1vw, 20px);
+    line-height: 130%;
+    color: var(--white);
+    margin-bottom: 10px;
   }
 
   &__phone {
-    transition    : color .2s ease;
-    display       : block;
-    margin-bottom : 10px;
+    transition: color 0.2s ease;
+    display: block;
+    margin-bottom: 10px;
     @include hover {
       &:hover {
-        color : var(--accent);
+        color: var(--accent);
       }
     }
   }
 
   &__socials {
-    display     : flex;
-    align-items : center;
-    gap         : 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 
     a {
-      transition : opacity .2s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
       @include hover {
         &:hover {
-          opacity : .5;
+          opacity: 0.5;
         }
       }
     }
   }
 
   &__mail {
-    font-family    : var(--second-family);
-    font-weight    : 400;
-    font-size      : clamp(110px, 9.5vw, 178px);
-    line-height    : 22%;
-    letter-spacing : -0.03em;
-    color          : var(--white);
-    transition     : opacity .2s ease;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clamp(110px, 9.5vw, 178px);
+    line-height: 22%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    transition: opacity 0.2s ease;
 
-    display        : block;
-    text-align     : justify;
-    @media(max-width : 1200px) {
-      font-size : 110px;
+    display: block;
+    text-align: justify;
+    @media (max-width: 1200px) {
+      font-size: 110px;
     }
-    @media(max-width : 1140px) {
-      display : none;
+    @media (max-width: 1140px) {
+      display: none;
     }
     @include hover {
       &:hover {
-        opacity : .5;
+        opacity: 0.5;
       }
     }
   }
