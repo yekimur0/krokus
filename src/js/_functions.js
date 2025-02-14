@@ -161,8 +161,8 @@ import SlimSelect from 'slim-select'
 const inputAbon = document?.querySelectorAll('.field-abon');
 const phones = document.querySelectorAll('.phone');
 
+
 inputAbon?.forEach((item) => {
-  console.log(item)
   new SlimSelect({
     select: item
   })
