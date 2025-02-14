@@ -55,7 +55,7 @@ const swiper_zone = new Swiper('.swiper-zone', {
   slidesPerView: 1,
   spaceBetween : 10,
   grabCursor   : true,
-
+  loop: true,
 
   effect: 'fade',
 
@@ -64,6 +64,7 @@ const swiper_zone = new Swiper('.swiper-zone', {
 
 const swiper_zone_2 = new Swiper('.swiper-zone-2', {
   slidesPerView: 3,
+  loop:true,
   thumbs       : {
     swiper: swiper_zone
   },
