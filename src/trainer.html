@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/head.html')
+
+  <body class="page__body">
+    @include('partials/header.html')
+    <main class="main main-trainer">
+      <section class="hero-page hero-page--about">
+        <div class="hero-page__img">
+          <img src="./img/trainer-bg.webp" alt="Crocus Fitness" />
+        </div>
+        <div class="container">
+          <div class="hero-page__bottom">
+            <h1>тренировки</h1>
+            <div class="hero-page__items">
+              <span
+                >индивидуальные<br />
+                групповые
+              </span>
+
+              <span
+                >мини-группы<br />
+                детские секции</span
+              >
+              <span>фитнес-датчики</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trainer-page">
+        <div class="container">
+          <h2 class="title__section trainer-page__title">
+            Современное <br />
+            оборудование <br />
+            и комфорт
+          </h2>
+
+          <div class="trainer-page__items">
+            <div class="item">
+              <div class="left">
+                <div class="subtitle">Групповые тренировки</div>
+                <div class="title">Силовые тренировки</div>
+                <div class="price">174 000 ₽/мес</div>
+
+                <p class="desc">
+                  Силовые тренировки укрепляют мышцы и развивают силу. Занятия
+                  проводятся на современных тренажерах и со свободными весами.
+                  Мы предлагаем различные программы, включая классические и
+                  функциональные, для любого уровня подготовки.
+                </p>
+                <button class="btn-reset link--more">
+                  подробнее
+                  <div class="icon">
+                    <svg
+                      width="20"
+                      height="16"
+                      viewBox="0 0 20 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 8L19.3485 8.3585L19.7173 8L19.3485 7.6415L19 8ZM1 7.5C0.723859 7.5 0.500001 7.72386 0.500001 8C0.500001 8.27614 0.723859 8.5 1 8.5L1 7.5ZM12.1485 15.3585L19.3485 8.3585L18.6515 7.6415L11.4515 14.6415L12.1485 15.3585ZM19.3485 7.6415L12.1485 0.641501L11.4515 1.3585L18.6515 8.3585L19.3485 7.6415ZM19 7.5L1 7.5L1 8.5L19 8.5L19 7.5Z"
+                        fill="#010101"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+              <div class="right">
+                <img src="./img/trainer-1.webp" alt="Тренажерный зал" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </body>
+</html>

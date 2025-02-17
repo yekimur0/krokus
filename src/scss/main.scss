@@ -27,6 +27,7 @@
 @import "pages/page-zone";
 @import "pages/page-team";
 @import "pages/page-about";
+@import "pages/page-trainers";
 
 .page__single {
   .footer {
@@ -187,6 +188,7 @@
     @media (max-width: 992px) {
       display: flex;
       flex-direction: column-reverse;
+      padding-top: 60px;
     }
   }
 
@@ -462,6 +464,7 @@
     padding: clamp(20px, 2vw, 40px);
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
+      padding-top: 60px;
     }
   }
 
@@ -648,6 +651,7 @@
     grid-template-columns: 1fr 1fr;
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
+      padding-top: 60px;
     }
   }
   .title {
@@ -719,4 +723,191 @@
 
 .ss-content .ss-list .ss-option {
   color: var(--white);
+}
+
+.modal-class {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: var(--grey);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  overflow: auto;
+
+  &__container {
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    cursor: pointer;
+    @media (max-width: 640px) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(20px, 2vw, 40px);
+    padding: clamp(20px, 2vw, 40px);
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      padding-top: 60px;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(14px, 1vw, 20px);
+    line-height: 130%;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 32px;
+  }
+  .desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.5vw, 24px);
+    line-height: 108%;
+    color: var(--white);
+    margin: 0;
+    margin-bottom: 56px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: clamp(24px, 3vw, 56px);
+    }
+
+    li {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(16px, 2vw, 24px);
+      line-height: 108%;
+      color: var(--white);
+      position: relative;
+      padding-left: 24px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: var(--accent);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .list-numbers {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-left: 0;
+      span {
+        margin: 0;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: clamp(24px, 3vw, 40px);
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(26px, 4vw, 72px);
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    position: relative;
+    margin-bottom: 100px;
+    @media (max-width: 992px) {
+      margin-bottom: 40px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 35%;
+      height: 1px;
+      background-color: var(--white);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 18%;
+      height: 1px;
+      background-color: var(--accent);
+      z-index: 1;
+    }
+  }
+
+  .right {
+    border-radius: 20px;
+    background: #465058;
+    padding: 32px;
+
+    .cb-title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: clamp(22px, 2vw, 32px);
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .cb-desc {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(16px, 1.5vw, 24px);
+      line-height: 108%;
+      color: var(--white);
+      margin-bottom: clamp(20px, 3vw, 56px);
+    }
+    span {
+      margin-bottom: 0;
+      color: var(--white);
+    }
+  }
 }
